@@ -81,7 +81,7 @@ scaled_data = scaler.transform(full_input_data)
 prediction = model.predict(scaled_data)
 prediction_prob = prediction[0][0]
 
-st.write("Churn probability: {prediction_prob:%0.2f}")
+st.write(f'Churn Probability: {prediction_prob:.2f}')
 
 if prediction_prob>=0.5:
     st.write("The customer is not likely to churn.")
